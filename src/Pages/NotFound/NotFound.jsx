@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div>
       <Header />
-      Not found
+      Page not found
     </div>
   );
 }

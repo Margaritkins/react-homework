@@ -15,7 +15,7 @@ const UserList = () => {
   }, []);
 
   const getData = () => {
-    getUsers()
+    getUsers(prompt())
       .then((data) => {
         console.log(data);
         setUsers(data.results);
@@ -31,7 +31,7 @@ const UserList = () => {
   const userMap = () =>
     users.map((userobj) => {
       return (
-        <UserCard userobj={userobj}/>
+        <UserCard key={userobj.login.uuid} userobj={userobj}/>
       );
     });
 
@@ -47,3 +47,4 @@ const UserList = () => {
 };
 
 export default UserList;
+ 
