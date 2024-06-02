@@ -1,0 +1,29 @@
+.wrapper {
+  height: 20%;
+  background-color: #ff5cfa33;
+
+  .navContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      li {
+        a {
+          color: rgb(73, 67, 73);
+          line-height: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    img {
+      width: 30vw;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}

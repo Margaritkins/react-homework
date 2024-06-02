@@ -1,0 +1,17 @@
+.container{
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ff5cfa33;
+  color: rgb(58, 37, 53);
+.title{
+  font-size: 3rem;
+  padding: inherit;
+}
+
+}

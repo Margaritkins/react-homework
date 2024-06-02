@@ -17,7 +17,6 @@ const UserList = () => {
   const getData = () => {
     getUsers(prompt())
       .then((data) => {
-        console.log(data);
         setUsers(data.results);
       })
       .catch((error) => {
@@ -47,4 +46,3 @@ const UserList = () => {
 };
 
 export default UserList;
- 
