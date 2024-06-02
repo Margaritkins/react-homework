@@ -9,7 +9,7 @@ const Header = () => {
           <div>
             <img src="https://cdn.pixabay.com/photo/2020/07/26/17/59/woman-5440247_1280.jpg" alt="header image" />
           </div>
-        <ul >
+        <ul className={styles.links}>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/users'>Users</Link></li>
           <li><Link to='/todo'>Todo</Link></li>
