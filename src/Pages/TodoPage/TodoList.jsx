@@ -54,7 +54,7 @@ const TodoList = () => {
           handleIsDone={handleIsDone}
           deleteTask={deleteTask}
         />
-        <h2 className={styles.title}>Todo form</h2>
+        <h2 className={styles.title}>Add new task</h2>
         <TodoForm initialValues={todo} onSubmit={onSubmit} />
       </section>
     </>

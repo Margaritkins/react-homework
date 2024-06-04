@@ -7,7 +7,7 @@ const Header = () => {
     <section className={styles.wrapper}>
       <nav className={styles.navContainer}>
           <div>
-            <img src="https://cdn.pixabay.com/photo/2020/07/26/17/59/woman-5440247_1280.jpg" alt="header image" />
+            <img src="https://icons.iconarchive.com/icons/dapino/flowered-folder/256/folder-flower-pink-icon.png" alt="header image" />
           </div>
         <ul className={styles.links}>
           <li><Link to='/'>Home</Link></li>
