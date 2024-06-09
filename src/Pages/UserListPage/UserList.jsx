@@ -3,21 +3,19 @@ import Header from "../../components/Header/Header";
 import { getUsers } from "../../api/index";
 import Spinner from "../../components/Spinner/Spinner";
 import UserCard from "../../components/UserCard/UserCard";
-import styles from './UserListPage.module.scss'
+import styles from "./UserListPage.module.scss";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setLoading] = useState(true);
-  // const [page, setPage] = useState(1);
 
   useEffect(() => {
     getData();
   }, []);
 
   const getData = () => {
-    // getUsers(prompt())
-    getUsers(15)
+    getUsers(prompt())
       .then((data) => {
         setUsers(data.results);
       })
@@ -31,9 +29,7 @@ const UserList = () => {
 
   const userMap = () =>
     users.map((userobj) => {
-      return (
-        <UserCard key={userobj.login.uuid} userobj={userobj}/>
-      );
+      return <UserCard key={userobj.login.uuid} userobj={userobj} />;
     });
 
   return (
