@@ -3,6 +3,7 @@ import { Field, Form, Formik } from "formik";
 import styles from "./Todo.module.scss"
 
 const TodoForm = (props) => {
+  // eslint-disable-next-line 
   const { todo, onSubmit } = props;
   return (
     <Formik initialValues={{ body: "" }} onSubmit={onSubmit}>
