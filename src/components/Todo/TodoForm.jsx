@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, Form, Formik } from "formik";
-import styles from "./TodoForm.module.scss"
+import styles from "./Todo.module.scss"
 
 const TodoForm = (props) => {
   const { todo, onSubmit } = props;

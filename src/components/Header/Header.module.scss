@@ -1,15 +1,16 @@
-// @use "../../common/styles/breackpoints" as *;
+@use "/src/common/styles/colors" as *;
+@use "/src/common/styles/sizes" as *;
+@use "/src/common//styles/templates" as *;
+
 $mobile: 480px;
 $tablet: 7680px;
 $laptop: 1024px;
 $esktop: 1025px;
 .wrapper {
+  @extend %flexCenter;
   height: 50px;
   min-height: 35px;
   max-height: 10vh;
-  display:flex;
-  align-items: center;
-  background: rgb(159, 254, 255);
   background: linear-gradient(
     49deg,
     rgba(159, 254, 255, 1) 0%,
@@ -21,39 +22,23 @@ $esktop: 1025px;
   .navContainer {
     width: 100%;
     max-height: 100%;
-    // margin: auto;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-around;
 
     .links {
-      display: flex;
+      @extend %flexCenter;
       flex-direction: row;
       justify-content: space-evenly;
-      align-items: center;
-      // padding: 10px;
-      @media screen and (max-width: $mobile) {
-        margin-left: 10%;
-        // min-width: 320px;
-        // max-height: 400px;
-        // flex-direction: column;
-      }
+      // @media screen and (max-width: $mobile) {
+      //   margin-left: 10%;
+      // }
       li {
         margin: 10px;
-        // margin-left: 100%; // Відступ між елементами списку
       }
 
       a {
-        color: rgb(255, 255, 255);
-        line-height: 1rem;
-        font-size: 1.5rem;
+        color: $colorWhite;
+        line-height: $textSmall;
+        font-size: $textSmall;
       }
-    }
-
-    img {
-      // width: 30;
-      height: 10vh;
-      object-fit: cover;
     }
   }
 }

@@ -40,14 +40,14 @@ const Home = () => {
               <a href="/users">
               </a>{" "}
                 <Link to="/users">Users</Link>
-              page to manage your users
+                {" "}page to manage your users
             </p>
             <p>
               or the{" "}
               <a href="/todo">
               </a>{" "}
                 <Link to="/todo">Task List</Link>
-              page to manage your tasks.
+                {" "}page to manage your tasks.
             </p>
           </ul>
         </article>

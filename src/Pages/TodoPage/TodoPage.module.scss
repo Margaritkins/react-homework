@@ -1,17 +1,18 @@
-.container{
-  margin: auto;
-  padding: 0;
+@use "/src/common/styles/colors" as *;
+@use "/src/common/styles/sizes" as *;
+@use "/src/common//styles/templates" as *;
+
+.container {
+  @extend %flexCenter;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: auto;
   padding: 1rem;
-  background-color: #ff5cfa33;
-  color: rgb(58, 37, 53);
-.title{
-  font-size: 3rem;
-  padding: inherit;
-}
 
+  .title {
+    padding: inherit;
+    color: $colorText;
+    font-size:$textTitle;
+  }
 }

@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import { getUsers } from "../../api/index";
 import Spinner from "../../components/Spinner/Spinner";
 import UserCard from "../../components/UserCard/UserCard";
+import styles from './UserListPage.module.scss'
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -15,7 +16,8 @@ const UserList = () => {
   }, []);
 
   const getData = () => {
-    getUsers(prompt())
+    // getUsers(prompt())
+    getUsers(15)
       .then((data) => {
         setUsers(data.results);
       })
@@ -37,10 +39,9 @@ const UserList = () => {
   return (
     <div>
       <Header />
-      {users && <ul>{userMap()}</ul>}
+      {users && <ul className={styles.usersWrapper}>{userMap()}</ul>}
       {isLoading && <div>{<Spinner />}</div>}
       {error && <div>{error.message}</div>}
-      User List
     </div>
   );
 };

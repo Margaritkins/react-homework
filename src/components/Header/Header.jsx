@@ -6,9 +6,6 @@ const Header = () => {
   return (
     <section className={styles.wrapper}>
       <nav className={styles.navContainer}>
-          <div>
-            <img src="https://icons.iconarchive.com/icons/dapino/flowered-folder/256/folder-flower-pink-icon.png" alt="header image" />
-          </div>
         <ul className={styles.links}>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/users'>Users</Link></li>

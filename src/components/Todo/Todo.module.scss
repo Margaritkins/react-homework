@@ -1,0 +1,71 @@
+@use "/src/common/styles/colors" as *;
+@use "/src/common/styles/sizes" as *;
+@use "/src/common//styles/templates" as *;
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  height: 100%;
+  .field,
+  .button {
+    width: 45%;
+    height: 5vh;
+    border: none;
+    border-radius: 8px;
+    font-size: $textSmall;
+  }
+  .button {
+    border: 1px solid $colorBorder;
+    background-color: transparent;
+    color: $colorText;
+    font-weight: bold;
+  }
+  .field {
+    color: $colorText;
+    outline: none;
+    caret-color: $colorCaret;
+    background-color: $colorWhite;
+    border: 1px solid $colorBorder;
+    font-size: $textSmall;
+  }
+  .field:-webkit-autofill,
+  .field:autofill {
+    box-shadow: 0 0 0 1000px white inset;
+    -webkit-text-fill-color: $colorText;
+    color: $colorText;
+    caret-color: $colorCaret;
+    
+  }
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%;
+  padding: 0;
+  color: $colorText;
+  font-size: $textSmall;
+
+  .taskWrapper {
+    @extend %flexCenter;
+    justify-content: space-between;
+    margin-top: 1%;
+    .taskBodyWrapper {
+      display: block;
+      max-width: 50%;
+    }
+
+    .button {
+      width: 100px;
+      height: 100%;
+      border: 1px solid $colorBorder;
+      border-radius: 4px;
+      background-color: $colorWhite;
+      color: $colorText;
+      font-weight: bold;
+      line-height: $textSmall;
+    }
+  }
+}

@@ -1,27 +1,40 @@
+@use "/src/common/styles/colors" as *;
+@use "/src/common/styles/sizes" as *;
+@use "/src/common//styles/templates" as *;
+
 .container {
-  margin: auto;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff5cfa33;
-  display: flex;
+  @extend %flexCenter;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  min-height: 90vh;
+  margin: auto;
+  color: $colorText;
   padding: 1rem;
   .title {
-    font-size: 3rem;
     padding: inherit;
+    font-size: $textTitle;
   }
   .subtitle {
     padding: inherit;
-    font-size: 2rem;
+    font-size: $textSubtitle;
   }
   .article {
     padding: inherit;
-    font-size: 1.5rem;
-    .description{
+    font-size: $textSmall;
+
+    .description {
+      margin: 10px;
       display: flex;
       flex-direction: column;
+      li,
+      p {
+        margin: 10px;
+      }
     }
+  }
+  a {
+    color: $colorTextLink;
+    line-height: $textSmall;
+    font-size: $textSmall;
   }
 }
